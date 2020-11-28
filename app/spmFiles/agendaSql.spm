@@ -1,0 +1,70 @@
+CREATE SEQUENCE "desen"."agenda_sistema_id_seq"
+ INCREMENT 1
+ MINVALUE 1
+ MAXVALUE 9223372036854775807
+ START 1
+ CACHE 1;
+
+
+CREATE TABLE "desen"."agenda_sistema" (
+"id" int8 DEFAULT nextval('"desen".agenda_sistema_id_seq'::regclass) NOT NULL,
+"ativo" bool,
+"data_alteracao" timestamp(6),
+"data_exclusao" timestamp(6),
+"data_inclusao" timestamp(6),
+"usuario_versao_id" int8,
+"prazo_inicial" date,
+"prazo_final" date,
+"descricao" varchar(255) COLLATE "default",
+"validada" bool,
+CONSTRAINT "agenda_sistema_pkey" PRIMARY KEY ("id")
+);
+
+CREATE TABLE "desen"."agenda_sistema_tipologia" (
+"agenda_sistema_id" int8 NOT NULL,
+"tipologia_id" int8 NOT NULL,
+CONSTRAINT "fkc4etju764q1b1056" FOREIGN KEY ("tipologia_id") REFERENCES "desen"."tipologia" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT "fkc4ety9ty4q1b1056" FOREIGN KEY ("agenda_sistema_id") REFERENCES "desen"."agenda_sistema" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+CREATE SEQUENCE "desen"."agenda_sistema_item_id_seq"
+ INCREMENT 1
+ MINVALUE 1
+ MAXVALUE 9223372036854775807
+ START 1
+ CACHE 1;
+
+CREATE TABLE "desen"."agenda_sistema_item" (
+"id" int8 DEFAULT nextval('"desen".agenda_sistema_item_id_seq'::regclass) NOT NULL,
+"ativo" bool,
+"data_alteracao" timestamp(6),
+"data_exclusao" timestamp(6),
+"data_inclusao" timestamp(6),
+"usuario_versao_id" int8,
+"agenda_sistema_id" int8,
+"unidade_atendimento_id" int8,
+"dia_semana" "public"."diasemana",
+"hora_inicial" time(6),
+"hora_final" time(6),
+"validado" bool,
+CONSTRAINT "agenda_sistema_item_pkey" PRIMARY KEY ("id"),
+CONSTRAINT "fkc4uyjkj881b1056" FOREIGN KEY ("unidade_atendimento_id") REFERENCES "desen"."unidade_atendimento" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT "fkcpltwq1t11b0915" FOREIGN KEY ("agenda_sistema_id") REFERENCES "desen"."agenda_sistema" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+CREATE TABLE "desen"."agen_sist_item_tip" (
+"tipologia_id" int8 NOT NULL,
+"agenda_sistema_item_id" int8 NOT NULL,
+CONSTRAINT "fk3078ftg46ae19926" FOREIGN KEY ("tipologia_id") REFERENCES "desen"."tipologia" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT "fk3078sseb6ae19926" FOREIGN KEY ("agenda_sistema_item_id") REFERENCES "desen"."agenda_sistema_item" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'Menu.AgendaSistema', '0', NULL, NULL);
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'AgendaSistema.adicionar', '1', NULL, select id from funcionalidade where id_tipo_funcionalidade =  'Menu.AgendaSistema');
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'AgendaSistema.editar', '1', NULL, select id from funcionalidade where id_tipo_funcionalidade =  'Menu.AgendaSistema');
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'AgendaSistema.deletar', '1', NULL, select id from funcionalidade where id_tipo_funcionalidade =  'Menu.AgendaSistema');
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'AgendaSistema.visualizar', '1', NULL, select id from funcionalidade where id_tipo_funcionalidade =  'Menu.AgendaSistema');
+INSERT INTO "desen"."funcionalidade" ("ativo", "data_alteracao", "data_exclusao", "data_inclusao", "nome", "id_tipo_funcionalidade", "usuario_versao_id", "id_funcionalidade_pai") VALUES ('t', NULL, NULL, NULL, 'AgendaSistema.consultar', '1', NULL, select id from funcionalidade where id_tipo_funcionalidade =  'Menu.AgendaSistema');

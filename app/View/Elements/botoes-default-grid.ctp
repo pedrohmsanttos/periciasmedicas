@@ -1,0 +1,3 @@
+<td><?php echo $this->Html->link('', array('action' => 'visualizar', $id ), array('class' => 'fa fa-2x fa-search', 'title' =>__('Visualizar'))); ?></td>
+<td><?php echo $this->Html->link('', array('action' => 'editar', $id ), array('class' => 'fa fa-2x fa-edit', 'title' =>__('Alterar'))); ?></td>
+<td><?php echo $this->Html->link('', array('action' => 'deletar', $id ), array('class' => 'fa fa-2x fa-trash-o', 'title' =>__('Excluir'))); ?></td>

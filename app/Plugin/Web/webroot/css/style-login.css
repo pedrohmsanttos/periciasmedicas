@@ -1,0 +1,151 @@
+html {
+    height: auto !important;
+}
+body { background: url(../img/bg2.png) center center !important; background-size: cover !important; }
+
+#branding { display: none; }
+#logo{
+    margin: auto;
+    margin-top: 10% !important;
+    background: url(../img/logo.png) !important;
+    height: 167px !important;
+    width: 350px !important;
+}
+.region-content{
+    margin-top: 0px !important;
+    margin: auto;
+    width: 360px;
+}
+
+#person-login{
+    margin-top: 0px !important;
+}
+
+#person-login, #person-pass {
+    border: none !important;
+    width: 350px !important;
+}
+
+#person-pass #edit-submit {
+    width: 240px !important;
+}
+
+#page {
+    background: transparent !important;
+    margin: auto !important;
+    padding-top: 120px !important;
+    width: 310px;
+}
+#page .tabs-secondary { display: none; }
+
+/*#person-login > div {
+    background: url(../images/logo.png) !important;
+    background-repeat: no-repeat !important;
+    margin-top: 100px;
+    padding-top: 170px;
+}*/
+
+.captcha { 
+    border: none !important;
+    padding: 0 !important;
+}
+.captcha .fieldset-legend { display: none; }
+
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+    border: 2px solid red !important;
+}
+#edit-name, #edit-pass, #edit-confirm-pass, #edit-data-nascimento, #edit-rg  {
+	border: none;
+	border-bottom: solid 2px white;
+	box-sizing: border-box !important;
+	padding: 10px !important;
+	width: 310px !important;
+	background: transparent;
+	color: white;
+	font-size: 15px;
+}
+#edit-name:hover, #edit-pass:hover, #edit-confirm-pass:hover, #edit-data-nascimento:hover, #edit-rg:hover  {
+	border-bottom: solid 2px #0071bc;
+}
+#edit-name:focus, #edit-pass:focus, #edit-confirm-pass:focus, #edit-data-nascimento:focus, #edit-rg:focus {
+	border-bottom: solid 2px #5CB6F2 !important;
+}
+#edit-actions { text-align: center !important; }
+
+#edit-submit {
+    width: 150px !important;
+    background-color: transparent !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    border: solid 2px #fff !important;
+    height: 40px !important;
+    color: #f0f0f0 !important;
+    text-align: center !important;
+    margin-bottom: 1em !important;
+    margin-right: 3em !important;/* LTR */
+    font-size: 1.077em !important;
+}
+#edit-submit:hover {    
+    background-color: white !important;   
+    border: solid 2px #fff !important;
+    color: #092F62 !important;
+	font-weight: 600;   
+}
+.logo_irh {
+	background: url(../img/logo-irh.png);	
+	width: 158px;
+	height: 65px;
+	right: 15px;
+	top: 15px;
+	position: absolute;
+}
+/* .logo_bsLogin {
+	background: url(../img/logo-bs2.png);	
+	width: 115px;
+	height: 40px;
+	left: 88%;
+	top: 90%;
+	position: absolute;
+	background-size: cover;
+} */
+.logo_bs_out{
+	width: 250px;
+	height: 95px;
+	overflow: hidden;
+	position: absolute;
+	margin-left: -125px;
+	left: 49%;
+	bottom: 0px;
+}
+
+.logo_bs_int{
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	-webkit-filter: blur(5px); 
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	filter: blur(5px);
+	padding-top: 55px;
+}
+
+.logo_bs {
+	background: url("../img/logo_sobe_bs.png");
+	width: 250px;
+	height: 95px;	
+		
+}
+.logo_bs_int:hover {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	-webkit-filter: blur(0px); 
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	filter: blur(0px);	
+	padding-top: inherit;
+
+}
+

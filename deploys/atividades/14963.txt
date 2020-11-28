@@ -1,0 +1,10 @@
+app/
+    Model/
+        UnidadeAtendimento.php (diff)
+    Plugin/
+        Web/
+            Controller/
+                UnidadeAtendimentoController.php (diff)
+            View/
+                UnidadeAtendimento/
+                    edit.ctp (diff)

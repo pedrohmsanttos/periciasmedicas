@@ -1,0 +1,21 @@
+app/
+    Model/
+        Atendimento.php
+        Agendamento.php
+        BSModel.php
+        UnidadeAtendimento.php
+    Plugin/Web/
+        View/
+            Elements/
+                aba_atendimento_parecer_tecnico.ctp
+            Layouts/
+                default.ctp (diff)
+            Atendimento/
+                edit.ctp (diff)
+        Controller/
+            AgendamentoController.php (diff)
+            AtendimentoController.php (diff)
+            UsuarioController.php (diff)
+            AgendaPeritoController.php (diff)
+
+

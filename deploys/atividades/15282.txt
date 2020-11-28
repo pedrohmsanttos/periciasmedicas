@@ -1,0 +1,6 @@
+app
+    Plugin/
+        Web/
+            View/
+                Atendimento/
+                    laudo_isencao_contribuicao.ctp (diff)

@@ -1,0 +1,7 @@
+<?php
+$config = array(
+	'Recaptcha' => array(
+		'Public'  => '6LdYDfoSAAAAAEHDNqdy465z0bdPhL0Ch64oSYIe',
+		'Private' => '6LdYDfoSAAAAAOqboOHCDw5L3MtEq54nRf-223Cq',
+	),
+);

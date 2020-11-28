@@ -1,0 +1,4 @@
+update agendamento set numero_processo = 2258  where agendamento.id = (select atendimento.agendamento_id from atendimento where atendimento.id= 2535);
+update agendamento set numero_processo = 1862  where agendamento.id = (select atendimento.agendamento_id from atendimento where atendimento.id= 2462);
+update agendamento set numero_processo = 1625  where agendamento.id = (select atendimento.agendamento_id from atendimento where atendimento.id= 1367);
+update agendamento set numero_processo = 803  where agendamento.id = (select atendimento.agendamento_id from atendimento where atendimento.id= 800); 

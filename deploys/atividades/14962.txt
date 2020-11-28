@@ -1,0 +1,14 @@
+app/
+    Model/
+        Requerimentos.php (diff)
+        Servidores.php (diff)
+    Plugin/
+        Web/
+            Controller/
+                AtendimentoController.php (diff)
+            View/
+                Atendimento/
+                    ajax_lista_historico.ctp
+                Elements/
+                    aba_atendimento_historico_medico.ctp (diff)
+                    procura_servidor.ctp

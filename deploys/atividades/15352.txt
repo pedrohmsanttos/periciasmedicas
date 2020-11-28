@@ -1,0 +1,8 @@
+app/
+    Plugin/
+        Web/
+            Controller/
+                AgendaSistemaController.php (diff)
+                AgendamentoController.php (diff)
+                GerenciamentoSalaController.php (diff)
+                PerfilController.php (diff)

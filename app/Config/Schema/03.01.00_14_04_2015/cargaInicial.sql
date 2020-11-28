@@ -1,0 +1,1 @@
+UPDATE desen.TIPOLOGIA SET ativo = false WHERE ID IN(20, 24); 

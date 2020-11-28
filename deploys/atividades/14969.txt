@@ -1,0 +1,12 @@
+app/
+    Plugin/
+        Web/
+            Controller/
+                AtendimentoController.php (diff)
+                UsuarioController.php (diff)
+            View/
+                Atendimento/
+                    index.ctp (diff)
+            webroot/
+                js/
+                    atendimento.js (diff)

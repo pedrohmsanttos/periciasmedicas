@@ -1,0 +1,5 @@
+html {
+    height: auto !important;
+}
+body { background: url(../img/erro.png) center center !important; background-size: cover !important; }
+

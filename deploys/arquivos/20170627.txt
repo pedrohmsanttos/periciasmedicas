@@ -1,0 +1,40 @@
+app/
+    Config/
+        core.php (diff)   !!!!!!!!!!!!  mudar configuração para produção
+    Model/
+        Atendimento.php
+        Agendamento.php
+        BSModel.php
+        UnidadeAtendimento.php
+        Requerimentos.php (diff)
+        Servidores.php (diff)
+    Plugin/
+        Web/
+            View/
+                Atendimento/
+                    ajax_lista_historico.ctp
+                    index.ctp (diff)
+                    historico_medico.ctp (diff)
+                    edit.ctp (diff)
+                Elements/
+                    aba_atendimento_parecer_tecnico.ctp
+                    aba_atendimento_historico_medico.ctp (diff)
+                    procura_servidor.ctp
+                UnidadeAtendimento/
+                    edit.ctp (diff)
+                AgendaPerito/
+                    index.ctp (diff)
+            Controller/
+                AtendimentoController.php (diff)
+                UsuarioController.php (diff)
+                AgendaPeritoController.php (diff)
+                UnidadeAtendimentoController.php (diff)
+                AgendaPeritoController.php (diff)
+                AgendaSistemaController.php (diff)
+                AgendamentoController.php (diff)
+                GerenciamentoSalaController.php (diff)
+                PerfilController.php (diff)
+
+            webroot/
+                js/
+                    atendimento.js (diff)

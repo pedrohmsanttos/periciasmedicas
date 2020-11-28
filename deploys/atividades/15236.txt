@@ -1,0 +1,6 @@
+app/
+    Plugin/
+        Web/
+            View/
+                Atendimento/
+                    historico_medico.ctp (diff)
